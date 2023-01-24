@@ -1,0 +1,982 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active,
+a:hover {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: sans-serif;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--обнулние--*/
+@font-face {
+  font-family: KdamThmorPro;
+  src: url("assets/fonts/KdamThmorPro-Regular.ttf");
+}
+@font-face {
+  font-family: TiroGurmukhi;
+  src: url("assets/fonts/TiroGurmukhi-Italic.ttf");
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(129, 53, 0, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+header {
+  height: 150px;
+  background-image: url(assets/img/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 150px;
+  font-family: KdamThmorPro;
+  font-size: 30px;
+  color: white;
+}
+
+.header__left {
+  display: flex;
+  line-height: 40px;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+  border: 1px solid white;
+}
+
+.navigate__items {
+  display: flex;
+  font-size: 20px;
+  margin: 10px 0 10px 0;
+  font-family: KdamThmorPro;
+}
+
+.navigate__item {
+  background-color: darkred;
+  margin: 10px;
+  height: 50px;
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigate__link {
+  color: white;
+}
+
+.navigate__item:hover {
+  transition: 0.5s;
+  transform: scale(1.1, 1.1);
+}
+
+.navigate__item:not(:hover) {
+  transition: 1s;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: rgba(129, 53, 0, 0.1);
+}
+
+.profile__img {
+  height: 300px;
+  margin-right: 10%;
+}
+
+.profile__info {
+  font-family: TiroGurmukhi;
+  font-size: 18px;
+  line-height: 24px;
+  width: 65%;
+}
+
+.profile__img:hover {
+  transition: 1s;
+  transform: scale(1.4, 1.4);
+}
+
+.profile__img:not(:hover) {
+  transition: 1.5s;
+}
+
+.profile__info_heading {
+  padding-bottom: 30px;
+  font-family: KdamThmorPro;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.sectionHeading {
+  text-align: center;
+  margin-top: 30px;
+  font-family: KdamThmorPro;
+  font-size: 30px;
+}
+
+.skills {
+  margin-top: 30px;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 22px;
+  font-family: KdamThmorPro;
+  color: white;
+  background-image: url(assets/img/bg.jpg);
+}
+
+.skills__name {
+  padding-bottom: 20px;
+}
+
+.plusBox {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border: 1px solid darkred;
+  border-radius: 2px;
+  background-color: darkred;
+}
+
+.minusBox {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border: 1px solid darkred;
+  border-radius: 2px;
+}
+
+.skills-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-family: KdamThmorPro;
+  background-color: rgba(129, 53, 0, 0.1);
+}
+
+.skills-info_buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-info_butt {
+  padding: 15px;
+  margin: 15px;
+  font-size: 18px;
+  background-color: #fff;
+  border: 3px solid darkred;
+  font-family: KdamThmorPro;
+}
+
+.skills-info_svg {
+  height: 130px;
+  margin: 40px;
+  -webkit-animation-name: hand;
+          animation-name: hand;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.skills-info_path {
+  fill: darkred;
+}
+
+@-webkit-keyframes hand {
+  0% {
+    transform: translateX(0);
+  }
+  15% {
+    transform: translateX(-15px);
+  }
+  30% {
+    transform: translate(0);
+  }
+  45% {
+    transform: translateX(-15px);
+  }
+  60% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translate(-15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes hand {
+  0% {
+    transform: translateX(0);
+  }
+  15% {
+    transform: translateX(-15px);
+  }
+  30% {
+    transform: translate(0);
+  }
+  45% {
+    transform: translateX(-15px);
+  }
+  60% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translate(-15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.skills-info_item {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  margin: 15px;
+  border: 3px solid darkred;
+}
+
+.skills-info__education {
+  font-size: 18px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.education_li {
+  padding: 15px;
+}
+
+.skills-info__ability {
+  font-size: 14px;
+  width: 50%;
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.ability_li {
+  border: 3px solid darkred;
+  margin: 0 5px 15px 5px;
+  padding: 15px;
+}
+
+.languages_flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.languages {
+  width: 90%;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.languages__card {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 130px;
+  width: 30%;
+  border: 3px solid #2f2f31;
+  background-image: url(assets/img/bg.jpg);
+}
+
+.languages__card_heading {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-size: 30px;
+  font-family: KdamThmorPro;
+}
+
+.languages__card_text {
+  padding-bottom: 30px;
+  font-size: 18px;
+  font-family: KdamThmorPro;
+}
+
+.languages__card_status {
+  padding: 5px;
+  font-size: 20px;
+  font-family: KdamThmorPro;
+  border: 3px solid darkred;
+  box-shadow: 0px 0px 4px 2px darkred;
+}
+
+.languages__card_link {
+  color: white;
+  text-decoration: underline;
+}
+
+.languages__card_link:hover {
+  color: darkred;
+}
+
+.projects {
+  margin-bottom: 15px;
+}
+
+.my-projects {
+  height: 200px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url(assets/img/bg.jpg);
+}
+
+.my-projects:hover .my-projects__item_svg {
+  -webkit-animation-name: none;
+          animation-name: none;
+}
+
+.my-projects__item {
+  height: 130px;
+  width: 200px;
+  position: relative;
+  text-align: center;
+  border: 3px solid darkred;
+}
+
+.my-projects__item:hover {
+  border-color: white;
+}
+
+.my-projects__item:hover .my-projects__item_txt {
+  color: darkred;
+}
+
+.my-projects__item:hover .my-projects__item_path {
+  fill: white;
+}
+
+.my-projects__item_txt {
+  padding-top: 11px;
+  color: white;
+  font-family: KdamThmorPro;
+  font-size: 25px;
+}
+
+.my-projects__item_svg {
+  position: absolute;
+  top: 45px;
+  left: 60px;
+  width: 70px;
+  height: 70px;
+  -webkit-animation-name: project_anim;
+          animation-name: project_anim;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.my-projects__item_path {
+  fill: darkred;
+}
+
+@-webkit-keyframes project_anim {
+  0% {
+    transform: translateX(-10px);
+  }
+  1% {
+    transform: translateX(10px);
+  }
+  2% {
+    transform: translateX(-10px);
+  }
+  3% {
+    transform: translateX(10px);
+  }
+  4% {
+    transform: translateX(-10px);
+  }
+  5% {
+    transform: translateX(10px);
+  }
+  6% {
+    transform: translateX(-10px);
+  }
+  7% {
+    transform: translateX(10px);
+  }
+  8% {
+    transform: translateX(-10px);
+  }
+  9% {
+    transform: translateX(10px);
+  }
+  10% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes project_anim {
+  0% {
+    transform: translateX(-10px);
+  }
+  1% {
+    transform: translateX(10px);
+  }
+  2% {
+    transform: translateX(-10px);
+  }
+  3% {
+    transform: translateX(10px);
+  }
+  4% {
+    transform: translateX(-10px);
+  }
+  5% {
+    transform: translateX(10px);
+  }
+  6% {
+    transform: translateX(-10px);
+  }
+  7% {
+    transform: translateX(10px);
+  }
+  8% {
+    transform: translateX(-10px);
+  }
+  9% {
+    transform: translateX(10px);
+  }
+  10% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+.code-example {
+  background-color: rgba(129, 53, 0, 0.1);
+}
+
+.example {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 18px;
+  font-family: TiroGurmukhi;
+  line-height: 24px;
+}
+
+.example__text {
+  width: 45%;
+  padding: 20px 30px 0 30px;
+  color: white;
+  background-image: url(assets/img/bg.jpg);
+}
+
+.example__code {
+  width: 45%;
+  height: 252px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid darkred;
+}
+
+.love-check {
+  height: 200px;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 20px;
+  position: relative;
+  border: 3px solid darkred;
+  background-image: url(assets/img/bg.jpg);
+}
+
+.love-check__form {
+  position: absolute;
+  top: 41px;
+  left: 70px;
+  display: flex;
+}
+
+.love-check_flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.love-check__input {
+  width: 70%;
+  display: inline;
+  padding-left: 10px;
+  border: 3px solid darkred;
+}
+
+.love-check__label {
+  padding-bottom: 10px;
+  font-family: KdamThmorPro;
+  font-size: 18px;
+  color: white;
+}
+
+.love-check__button {
+  width: 100px;
+  height: 100px;
+  margin-top: 9px;
+  font-family: KdamThmorPro;
+  font-size: 30px;
+  background: none;
+  border: 3px solid darkred;
+  color: white;
+}
+
+.love-check__button:hover {
+  border-color: white;
+  color: darkred;
+}
+
+.heart {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50px;
+  right: 100px;
+  border: 3px solid darkred;
+}
+
+.broken-heart_svg {
+  width: 70px;
+  height: 70px;
+  display: none;
+}
+
+.heart_svg {
+  width: 70px;
+  height: 70px;
+  display: none;
+}
+
+.heart_path {
+  fill: red;
+}
+
+footer {
+  height: 200px;
+  margin-top: 40px;
+  background-image: url(assets/img/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contacts {
+  height: 150px;
+}
+
+.contacts__items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__item {
+  width: 30%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacts__item_link {
+  padding: 15px 30px 15px 30px;
+  display: flex;
+  border: 3px solid darkred;
+}
+
+.contacts__item_link:hover {
+  border-color: white;
+}
+
+.contacts__item_link:hover .contacts__item_text {
+  color: darkred;
+}
+
+.contacts__item_link:hover .contacts__item_path {
+  fill: darkred;
+}
+
+.contacts__item_text {
+  padding-top: 15px;
+  padding-left: 20px;
+  font-family: KdamThmorPro;
+  font-size: 25px;
+  color: white;
+}
+
+.contacts__item_svg {
+  height: 60px;
+  width: 60px;
+}
+
+.contacts__item_path {
+  fill: white;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-info_svg {
+  width: 100px;
+  height: 40px;
+  margin-right: 100px;
+  fill: darkred;
+}
+
+.footer-info_svg:hover {
+  fill: white;
+}
+
+@media (max-width: 1440px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (max-width: 1140px) {
+  .container {
+    max-width: 920px;
+  }
+  .love-check__button {
+    margin-left: 0;
+  }
+  .heart {
+    right: 50px;
+  }
+}
+@media (max-width: 920px) {
+  .container {
+    max-width: 750px;
+  }
+  .example {
+    flex-direction: column;
+    align-items: center;
+  }
+  .example__text {
+    margin-bottom: 20px;
+    padding: 20px 30px 15px 30px;
+    width: 80%;
+  }
+  .example__code {
+    width: 80%;
+  }
+  .love-check {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+@media (max-width: 750px) {
+  .container {
+    max-width: 650px;
+  }
+  .skills {
+    flex-direction: column;
+    background-image: none;
+    height: 400px;
+  }
+  .skills_item {
+    background-image: url(assets/img/bg.jpg);
+    height: 100px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .skills__name {
+    padding: 0 0 0 20px;
+  }
+  .skills__grade {
+    padding: 0 20px 0 0;
+  }
+  .ability_li {
+    border: 2px solid darkred;
+    margin: 0 2px 5px 2px;
+  }
+  .my-projects {
+    flex-direction: column;
+    background-image: none;
+    height: 460px;
+  }
+  .my-projects__item {
+    background-image: url(assets/img/bg.jpg);
+  }
+  .contacts__items {
+    justify-content: space-around;
+  }
+  .contacts__item_svg {
+    height: 30px;
+    width: 30px;
+  }
+  .contacts__item_text {
+    font-size: 18px;
+    padding: 7px 0 0 9px;
+  }
+}
+@media (max-width: 650px) {
+  .container {
+    max-width: 450px;
+  }
+  .navigate__item {
+    width: 120px;
+  }
+  .profile {
+    flex-direction: column-reverse;
+  }
+  .profile__info_heading {
+    text-align: center;
+  }
+  .profile__info_text {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .profile__img {
+    margin: 0 0 0 0;
+  }
+  .skills-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .skills-info_item {
+    justify-content: center;
+  }
+  .skills-info_icon {
+    transform: rotate(90deg);
+  }
+  .skills-info_buttons {
+    flex-direction: unset;
+  }
+  .languages__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 130px;
+    width: 80%;
+  }
+  .languages {
+    width: 90%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .example__text {
+    width: 100%;
+  }
+  .example__code {
+    width: 100%;
+    font-size: 15px;
+  }
+  .love-check {
+    width: 100%;
+    margin-left: 0;
+  }
+  .love-check__button {
+    margin: 0 0 0 0;
+    height: 50px;
+  }
+  .heart {
+    height: 50px;
+    right: 89px;
+    top: 110px;
+  }
+  .broken-heart_svg {
+    width: 40px;
+    height: 40px;
+  }
+  .heart_svg {
+    width: 40px;
+    height: 40px;
+  }
+  .contacts {
+    height: 100px;
+  }
+  .contacts__item {
+    height: 100px;
+  }
+  .contacts__item_link {
+    padding: 5px 12px 5px 12px;
+  }
+}
+@media (max-width: 450px) {
+  .container {
+    max-width: 420px;
+  }
+  .heart {
+    right: 58px;
+  }
+}
+@media (max-width: 420px) {
+  .container {
+    max-width: 375px;
+  }
+  .navigate__item {
+    font-size: 12px;
+    width: 80px;
+  }
+  .skills-info_butt {
+    padding: 5px;
+    margin: 5px;
+  }
+  .love-check__form {
+    margin: 4px 0px 0px -30px;
+  }
+  .heart {
+    right: 44px;
+  }
+  .contacts__item_link {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 385px) {
+  .header__name {
+    font-size: 15px;
+  }
+  .header {
+    justify-content: space-around;
+  }
+}
+@media (max-width: 375px) {
+  .container {
+    max-width: 320px;
+  }
+  .profile__info_heading {
+    font-size: 30px;
+  }
+  .example__code {
+    font-size: 14px;
+  }
+  .love-check__button {
+    margin: 7px 0px 0px -33px;
+  }
+  .heart {
+    right: 22px;
+  }
+}/*# sourceMappingURL=style.css.map */
